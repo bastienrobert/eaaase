@@ -447,7 +447,7 @@
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = isClass
+      exports = module.exports = Ease
     }
     exports.Ease = Ease
   } else if (typeof define === 'function' && define.amd) {
