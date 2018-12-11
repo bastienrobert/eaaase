@@ -1,8 +1,10 @@
 # Ease
 
-Inspired from http://gizma.com/easing/
-
 Some ease functions
+
+## Example
+
+[Example](https://bastienrobert.github.io/eaaase/) using canvas 2d and easeInCubic function.
 
 ## Functions
 
@@ -17,3 +19,6 @@ Some ease functions
 - **back**
 - **bounce**
 - **elastic**
+
+
+Inspired from http://gizma.com/easing/
