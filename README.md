@@ -1,4 +1,6 @@
-# Ease
+# Eaaase
+
+[![NPM](https://nodei.co/npm/eaaase.png?compact=true)](https://nodei.co/npm/eaaase/)
 
 Some ease functions
 

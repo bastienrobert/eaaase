@@ -10,15 +10,23 @@ var deltaTime = 0
 var currentTime = 0
 var startTime = 0
 
-window.addEventListener('resize', reset)
+window.addEventListener('resize', onResize)
 document.addEventListener('click', reset)
-reset()
+onResize()
 animate()
 
-function reset() {
+function onResize() {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
+  reset()
+}
 
+function reset() {
+  if (raf) {
+    window.cancelAnimationFrame(raf)
+    raf = null
+  }
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
   x = 0
   ctx.fillStyle = '#24292e'
   ctx.fillRect(0, 0, canvas.width, canvas.height)
@@ -35,17 +43,15 @@ function animate() {
   currentTime += deltaTime
 
   if (x <= (3 * canvas.width) / 4) {
-    x = Ease.easeInCubic(
+    x = Ease.easeInQuad(
       currentTime - startTime,
       canvas.width / 4,
       (3 * canvas.width) / 4,
       2
     )
-  } else {
-    window.cancelAnimationFrame(raf)
-    raf = null
   }
 
+  ctx.save()
   ctx.beginPath()
   ctx.globalAlpha = '.001'
   ctx.fillStyle = '#24292e'
@@ -54,11 +60,10 @@ function animate() {
   ctx.closePath()
 
   ctx.beginPath()
-  ctx.save()
   ctx.translate(0, canvas.height / 2 - ray / 2)
   ctx.fillStyle = '#ff0000'
   ctx.arc(x, 0, ray, 0, Math.PI * 2)
   ctx.fill()
-  ctx.restore()
   ctx.closePath()
+  ctx.restore()
 }
