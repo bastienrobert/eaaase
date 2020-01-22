@@ -1,19 +1,41 @@
 {
   "name": "eaaase",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Some ease functions",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/browser.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bastienrobert/ease.git"
   },
+  "keywords": [
+    "pinch",
+    "mobile zoom"
+  ],
   "author": "Bastien Robert",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bastienrobert/ease/issues"
   },
-  "homepage": "https://github.com/bastienrobert/ease#readme"
+  "homepage": "https://github.com/bastienrobert/ease#readme",
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "rollup": "^1.21.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^6.2.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.24.2",
+    "rollup-plugin-uglify": "^6.0.3",
+    "typescript": "^3.6.3"
+  }
 }
