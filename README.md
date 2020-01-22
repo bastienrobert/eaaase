@@ -1,30 +1,42 @@
-# Eaaase
+<h1 align="center">Ease</h1>
 
-[![NPM](https://nodei.co/npm/eaaase.png?compact=true)](https://nodei.co/npm/eaaase/)
+<h4 align="center">Some ease functions</h4>
 
-Some ease functions
+<blockquote align="center">
+  <em>Developped to be used with really old browsers and with or without module bundler.</em><br>
+  <em>Fast & <b>~1kb</b> gzipped</em>
+</blockquote>
 
-## How to use
+<p align="center">
+  <a href="https://badge.fury.io/js/eaaase">
+    <img alt="" src="https://badge.fury.io/js/eaaase.svg">
+  </a>
+  <a aria-label="install size" href="https://bundlephobia.com/result?p=eaaase">
+    <img alt="" src="https://badgen.net/bundlephobia/minzip/eaaase">
+  </a>
+  <a aria-label="license" href="https://github.com/bastienrobert/eaaase/blob/master/LICENSE">
+    <img alt="" src="https://img.shields.io/github/license/bastienrobert/eaaase.svg">
+  </a>
+</p>
 
-You can download the index.js and add it to your project, or:
+[Example](https://bastienrobert.github.io/eaaase/) using canvas 2d and easeInCubic function.
+
+## Install
 
 ```
 npm install eaaase
 ```
 
-then
+## Usage
 
-```js
-import Ease from 'eaaase'
-// or
-const Ease = require('eaaase')
-
-Ease.linear(currentTime, from, to, duration)
 ```
+import Ease from "eaaase";
+// or
+const Ease = require("eaaase");
 
-## Example
-
-[Example](https://bastienrobert.github.io/eaaase/) using canvas 2d and easeInCubic function.
+Ease.linear(currentTime, from, to, duration);
+})
+```
 
 ## Functions
 
