@@ -19,7 +19,7 @@
   </a>
 </p>
 
-[Example](https://bastienrobert.github.io/eaaase/) using canvas 2d and easeInCubic function.
+[Example](https://bastienrobert.github.io/eaaase/example) using canvas 2d and easeInCubic function.
 
 ## Install
 
